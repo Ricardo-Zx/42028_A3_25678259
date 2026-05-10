@@ -1,0 +1,460 @@
+{% extends "checkout/base.html" %}
+
+{% block title %}Confirm Checkout{% endblock %}
+{% block page_title %}Confirm Checkout{% endblock %}
+{% block page_badge %}<span class="badge">{{ session.model_name|cut:"_best" }}</span>{% endblock %}
+
+{% block extra_head %}
+<style>
+  /* Override wrap to fill viewport height */
+  .wrap {
+    height: calc(100vh - 56px);
+    padding-top: 14px;
+    padding-bottom: 12px;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+  }
+
+  /* Inner flex column to hold header + grid */
+  .confirm-shell {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    min-height: 0;
+  }
+
+  .confirm-header {
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 12px;
+    gap: 12px;
+    flex-wrap: wrap;
+  }
+
+  /* Main two-column grid */
+  .confirm-grid {
+    flex: 1;
+    min-height: 0;
+    display: grid;
+    grid-template-columns: 1fr 340px;
+    gap: 14px;
+    align-items: stretch;
+  }
+
+  /* ── Left: table panel ── */
+  .confirm-table-panel {
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    /* inherits .table-panel card styles */
+  }
+  .table-scroll-area {
+    flex: 1;
+    min-height: 0;
+    overflow-y: auto;
+  }
+  .table-scroll-area::-webkit-scrollbar { width: 5px; }
+  .table-scroll-area::-webkit-scrollbar-track { background: transparent; }
+  .table-scroll-area::-webkit-scrollbar-thumb { background: #e2e8f0; border-radius: 4px; }
+
+  /* ── Right: sidebar ── */
+  .confirm-sidebar {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    overflow: hidden;
+  }
+
+  /* Stats 2×2 */
+  .confirm-stats {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 8px;
+    flex-shrink: 0;
+  }
+  .confirm-stats .stat {
+    padding: 10px 14px;
+    min-width: 0;
+  }
+  .confirm-stats .stat-value { font-size: 22px; }
+
+  /* Images side by side */
+  .confirm-images {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 8px;
+    flex-shrink: 0;
+  }
+  .conf-img-panel {
+    background: #fff;
+    border-radius: 12px;
+    border: 1px solid #f0f4f8;
+    padding: 8px;
+    box-shadow: 0 1px 2px rgba(0,0,0,0.04);
+  }
+  .conf-img-label {
+    font-size: 9.5px; font-weight: 700; color: #94a3b8;
+    text-transform: uppercase; letter-spacing: 0.6px; margin-bottom: 5px;
+  }
+  .conf-img-panel img {
+    width: 100%; height: 118px;
+    object-fit: contain; border-radius: 6px;
+    background: #f8fafc; display: block;
+  }
+
+  /* Chart fills remaining sidebar space */
+  .confirm-chart-panel {
+    flex: 1;
+    min-height: 0;
+    background: #fff;
+    border-radius: 16px;
+    padding: 14px 16px 10px;
+    box-shadow: 0 1px 2px rgba(0,0,0,0.04), 0 4px 16px rgba(0,0,0,0.05);
+    border: 1px solid #f0f4f8;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+  }
+  .confirm-chart-panel h2 {
+    margin: 0 0 8px !important;
+    flex-shrink: 0;
+  }
+  .confirm-chart-panel canvas {
+    flex: 1;
+    min-height: 0;
+  }
+
+  /* Responsive fallback */
+  /* Image lightbox */
+  .img-lightbox {
+    position: fixed; inset: 0; z-index: 9998;
+    background: rgba(10, 18, 30, 0.88);
+    backdrop-filter: blur(6px);
+    display: flex; align-items: center; justify-content: center;
+    cursor: zoom-out;
+    animation: lbIn 0.18s ease;
+  }
+  @keyframes lbIn { from { opacity: 0; } to { opacity: 1; } }
+  .img-lightbox img {
+    max-width: 90vw; max-height: 90vh;
+    border-radius: 12px;
+    box-shadow: 0 0 80px rgba(0,0,0,0.6);
+    animation: lbScale 0.2s cubic-bezier(0.34,1.42,0.64,1);
+  }
+  @keyframes lbScale { from { transform: scale(0.9); } to { transform: scale(1); } }
+  .conf-img-panel img { cursor: zoom-in; transition: opacity 0.15s; }
+  .conf-img-panel img:hover { opacity: 0.85; }
+
+  @media (max-width: 960px) {
+    .wrap { height: auto; overflow: visible; padding-bottom: 48px; }
+    .confirm-shell { flex: none; }
+    .confirm-grid { grid-template-columns: 1fr; height: auto; }
+    .table-scroll-area { overflow: visible; }
+    .confirm-sidebar { overflow: visible; }
+    .confirm-chart-panel { min-height: 260px; }
+  }
+</style>
+{% endblock %}
+
+{% block content %}
+<div class="confirm-shell">
+
+  {% if is_empty_detection %}
+  <div style="background:#fff1f1;border:2px solid #f87171;color:#7f1d1d;border-radius:12px;padding:14px 18px;margin-bottom:10px;font-size:13.5px;line-height:1.6;flex-shrink:0;display:flex;align-items:flex-start;gap:10px">
+    <svg style="flex-shrink:0;margin-top:2px" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#ef4444" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+    <div><strong>No products detected.</strong> The image may be blurred, obstructed, or captured from an unsuitable angle. Upload another image to continue, or add items manually below.</div>
+  </div>
+  {% endif %}
+
+  {% if has_low_conf_warning %}
+  <div style="background:#fff7e8;border:1px solid #f4ddb0;color:#8a5a00;border-radius:12px;padding:11px 16px;margin-bottom:10px;font-size:13px;line-height:1.55;flex-shrink:0">
+    <strong>Low-confidence detections found.</strong>
+    Please review the highlighted items before confirming.
+    {% if critical_conf_count > 0 %}
+    <span style="margin-left:6px;font-size:12px">
+      {{ critical_conf_count }} item{{ critical_conf_count|pluralize }} under 40% · {{ low_conf_count }} under 60%
+    </span>
+    {% else %}
+    <span style="margin-left:6px;font-size:12px">{{ low_conf_count }} item{{ low_conf_count|pluralize }} under 60% confidence.</span>
+    {% endif %}
+  </div>
+  {% endif %}
+
+  <!-- Header -->
+  <div class="confirm-header">
+    <div>
+      <div class="status-badge">{{ session.get_status_display }}</div>
+      <div class="muted" style="margin-top:4px;font-size:12px">Order #{{ session.id|slice:":8"|upper }}</div>
+    </div>
+    <div class="muted" style="font-size:13px">Review detections, adjust quantities, add missed items, then confirm.</div>
+  </div>
+
+  <!-- Single-page grid -->
+  <div class="confirm-grid">
+
+    <!-- LEFT: items table -->
+    <div class="table-panel confirm-table-panel">
+      <div class="table-header">
+        <h2 style="margin:0">Review Items</h2>
+      </div>
+
+      <div class="table-scroll-area">
+        <form method="post" id="update-form">
+          {% csrf_token %}
+          <input type="hidden" name="action" value="update_items">
+          <table>
+            <thead>
+              <tr>
+                <th>Item</th>
+                <th>Qty</th>
+                <th>Confidence</th>
+                <th>Unit Price</th>
+                <th>Subtotal</th>
+                <th></th>
+              </tr>
+            </thead>
+            <tbody>
+              {% for item in session.items.all %}
+              <tr
+                {% if item.avg_conf < 40 %}style="background:#fff1f1"
+                {% elif item.avg_conf < 60 %}style="background:#fff8e8"
+                {% endif %}
+              >
+                <td>
+                  <strong>{{ item.display_name }}</strong>
+                  {% if item.source == "manual" %}
+                  <div class="muted" style="font-size:11px;margin-top:2px">Added manually</div>
+                  {% endif %}
+                  {% if item.avg_conf < 40 %}
+                  <div style="font-size:11px;margin-top:3px;color:#a12727;font-weight:700">Very low confidence</div>
+                  {% elif item.avg_conf < 60 %}
+                  <div style="font-size:11px;margin-top:3px;color:#8a5a00;font-weight:700">Needs review</div>
+                  {% endif %}
+                </td>
+                <td><input class="qty-input" type="number" min="0" name="qty_{{ item.id }}" value="{{ item.quantity }}"></td>
+                <td>{{ item.avg_conf }}%</td>
+                <td>${{ item.unit_price }}</td>
+                <td><strong>${{ item.subtotal }}</strong></td>
+                <td>
+                  <button type="button" class="inline-btn danger-btn"
+                          onclick="confirmRemove('{{ item.id }}', '{{ item.display_name|escapejs }}')">
+                    Remove
+                  </button>
+                </td>
+              </tr>
+              {% empty %}
+              <tr><td colspan="6" style="color:#94a3b8;text-align:center;padding:24px 24px 18px">No items detected from the current image.</td></tr>
+              {% endfor %}
+            </tbody>
+          </table>
+        </form>
+      </div>
+
+      <!-- Add item -->
+      <div style="padding:10px 20px 12px;border-top:1px solid #f1f5f9;flex-shrink:0">
+        <div style="font-size:10.5px;font-weight:700;color:#94a3b8;text-transform:uppercase;letter-spacing:0.6px;margin-bottom:8px">
+          Add Missing Item
+        </div>
+        <div class="form-row">
+          <input id="sku-input" class="field" type="text" list="sku-options"
+                 placeholder="Search product…" style="flex:1;min-width:0">
+          <datalist id="sku-options">
+            {% for option in sku_options %}
+            <option value="{{ option.sku_name }}">{{ option.display_name }}</option>
+            {% endfor %}
+          </datalist>
+          <input id="qty-add" class="field" type="number" min="1" value="1" style="width:72px;min-width:0">
+          <button type="button" class="secondary-btn" onclick="confirmAdd()">Add</button>
+        </div>
+      </div>
+
+      <!-- Total + Confirm -->
+      <div class="action-bar" style="justify-content:space-between;border-top:1px solid #f1f5f9;padding-top:12px;padding-bottom:14px;flex-shrink:0">
+        <div>
+          <div class="muted" style="font-size:12px">Subtotal (ex GST): ${{ session.subtotal_ex_gst }}</div>
+          <div class="muted" style="font-size:12px">GST (10%): ${{ session.gst }}</div>
+          <div style="font-weight:800;font-size:21px;color:#1a4d6b;margin-top:2px">Total: ${{ session.total }}</div>
+        </div>
+        <div style="display:flex;align-items:flex-end;gap:10px;flex-wrap:wrap;justify-content:flex-end">
+          {% if is_empty_detection %}
+          <div class="muted" style="font-size:12px;max-width:240px;text-align:right">
+            Re-upload a clearer image, or add items manually before completing this order.
+          </div>
+          {% endif %}
+          <form method="post">
+            {% csrf_token %}
+            <input type="hidden" name="action" value="retake_photo">
+            <button class="secondary-btn" type="submit">Retake Photo</button>
+          </form>
+          {% if not is_empty_detection %}
+          <form method="post">
+            {% csrf_token %}
+            <input type="hidden" name="action" value="confirm_checkout">
+            <button class="primary-btn" type="submit">Confirm Checkout</button>
+          </form>
+          {% endif %}
+        </div>
+      </div>
+    </div>
+
+    <!-- RIGHT: sidebar -->
+    <div class="confirm-sidebar">
+
+      <!-- Stats 2×2 -->
+      <div class="confirm-stats">
+        <div class="stat">
+          <div class="stat-label">Detected</div>
+          <div class="stat-value">{{ session.num_detected }}</div>
+        </div>
+        <div class="stat">
+          <div class="stat-label">Unique SKUs</div>
+          <div class="stat-value">{{ session.num_unique }}</div>
+        </div>
+        <div class="stat">
+          <div class="stat-label">Avg conf.</div>
+          <div class="stat-value">{{ session.avg_conf }}%</div>
+        </div>
+        <div class="stat">
+          <div class="stat-label">Total</div>
+          <div class="stat-value">${{ session.total }}</div>
+        </div>
+      </div>
+
+      <!-- Images -->
+      <div class="confirm-images">
+        <div class="conf-img-panel">
+          <div class="conf-img-label">Original</div>
+          <img src="{{ session.uploaded_image_url }}" alt="Original upload">
+        </div>
+        <div class="conf-img-panel">
+          <div class="conf-img-label">Annotated</div>
+          <img src="{{ session.annotated_image_url }}" alt="Annotated detection">
+        </div>
+      </div>
+
+      <!-- Chart -->
+      <div class="confirm-chart-panel">
+        <h2>By Category</h2>
+        <canvas id="cat-chart"></canvas>
+      </div>
+
+    </div>
+  </div>
+</div>
+{% endblock %}
+
+{% block extra_js %}
+<script>
+  const SKU_NAMES = { {% for o in sku_options %}"{{ o.sku_name|escapejs }}": "{{ o.display_name|escapejs }}", {% endfor %} };
+
+  function postAction(fields) {
+    const csrf = document.querySelector('[name=csrfmiddlewaretoken]').value;
+    const body = new FormData();
+    body.append('csrfmiddlewaretoken', csrf);
+    Object.entries(fields).forEach(([k, v]) => body.append(k, v));
+    fetch(window.location.pathname, { method: 'POST', body })
+      .then(() => { _confirmed = true; location.reload(); });
+  }
+
+  let _qtyTimer = null;
+  function scheduleQtyUpdate() {
+    clearTimeout(_qtyTimer);
+    _qtyTimer = setTimeout(() => {
+      const fields = { action: 'update_items' };
+      document.querySelectorAll('.qty-input').forEach(inp => { fields[inp.name] = inp.value; });
+      postAction(fields);
+    }, 600);
+  }
+  document.querySelectorAll('.qty-input').forEach(inp => inp.addEventListener('change', scheduleQtyUpdate));
+
+  function confirmRemove(itemId, name) {
+    AppModal.show({
+      iconVariant: 'danger',
+      title: 'Remove item?',
+      message: 'Remove <strong>"' + name + '"</strong> from this order?',
+      confirmText: 'Remove',
+      confirmVariant: 'danger',
+      onConfirm() { postAction({ action: 'remove_item', item_id: itemId }); }
+    });
+  }
+
+  function confirmAdd() {
+    const sku = document.getElementById('sku-input').value.trim();
+    const qty = parseInt(document.getElementById('qty-add').value) || 1;
+    if (!sku) { document.getElementById('sku-input').focus(); return; }
+    const displayName = SKU_NAMES[sku] || sku;
+    AppModal.show({
+      iconVariant: 'primary',
+      title: 'Add item?',
+      message: 'Add <strong>' + qty + '×</strong> <strong>"' + displayName + '"</strong> to this order?',
+      confirmText: 'Add',
+      confirmVariant: 'primary',
+      onConfirm() { postAction({ action: 'add_item', manual_sku: sku, manual_qty: qty }); }
+    });
+  }
+
+  // Navigation guard
+  let _confirmed = false;
+  document.querySelector('form [name="action"][value="confirm_checkout"]')
+    ?.closest('form')?.addEventListener('submit', () => { _confirmed = true; });
+  document.querySelector('form [name="action"][value="retake_photo"]')
+    ?.closest('form')?.addEventListener('submit', () => { _confirmed = true; });
+
+  document.addEventListener('click', function(e) {
+    if (_confirmed) return;
+    const link = e.target.closest('a[href]');
+    if (!link) return;
+    const href = link.getAttribute('href');
+    if (!href || href.startsWith('#') || href.startsWith('javascript')) return;
+    e.preventDefault();
+    e.stopPropagation();
+    AppModal.show({
+      iconVariant: 'primary',
+      title: 'Confirm checkout first',
+      message: 'Please <strong>confirm this order</strong> before leaving so the next customer can check out.',
+      confirmText: 'Confirm Checkout',
+      confirmVariant: 'primary',
+      onConfirm() {
+        _confirmed = true;
+        document.querySelector('form [name="action"][value="confirm_checkout"]').closest('form').submit();
+      }
+    });
+  }, true);
+
+  window.addEventListener('beforeunload', function(e) {
+    if (_confirmed) return;
+    e.preventDefault();
+    e.returnValue = '';
+  });
+
+  // Image lightbox
+  document.querySelectorAll('.conf-img-panel img').forEach(img => {
+    img.addEventListener('click', () => {
+      const lb = document.createElement('div');
+      lb.className = 'img-lightbox';
+      lb.innerHTML = '<img src="' + img.src + '" alt="' + img.alt + '">';
+      lb.addEventListener('click', () => lb.remove());
+      document.body.appendChild(lb);
+    });
+  });
+
+  const labels = {{ cat_labels|safe }};
+  const values = {{ cat_values|safe }};
+  const palette = ['#1a4d6b','#2980b9','#27ae60','#f39c12','#e74c3c','#8e44ad','#16a085','#d35400','#2c3e50','#7f8c8d'];
+  new Chart(document.getElementById('cat-chart'), {
+    type: 'doughnut',
+    data: {
+      labels,
+      datasets: [{ data: values, backgroundColor: palette.slice(0, labels.length), borderWidth: 2, borderColor: '#fff' }]
+    },
+    options: {
+      maintainAspectRatio: false,
+      plugins: { legend: { position: 'bottom', labels: { font: { size: 10 }, boxWidth: 10, padding: 8 } } },
+      cutout: '60%'
+    }
+  });
+</script>
+{% endblock %}

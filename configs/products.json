@@ -1,0 +1,1802 @@
+{
+  "1_puffed_food": {
+    "yolo_id": 0,
+    "sku_name": "1_puffed_food",
+    "category_id": 1,
+    "sku_class": "puffed_food",
+    "barcode": 6909409012031,
+    "display_name": "Oishi Holland Peas 55g",
+    "category_name": "Puffed Snacks"
+  },
+  "2_puffed_food": {
+    "yolo_id": 1,
+    "sku_name": "2_puffed_food",
+    "category_id": 2,
+    "sku_class": "puffed_food",
+    "barcode": 6901845043112,
+    "display_name": "Garden Crackers 80g",
+    "category_name": "Puffed Snacks"
+  },
+  "3_puffed_food": {
+    "yolo_id": 2,
+    "sku_name": "3_puffed_food",
+    "category_id": 3,
+    "sku_class": "puffed_food",
+    "barcode": 6909409012024,
+    "display_name": "Oishi Prawn Crackers 40g",
+    "category_name": "Puffed Snacks"
+  },
+  "4_puffed_food": {
+    "yolo_id": 3,
+    "sku_name": "4_puffed_food",
+    "category_id": 4,
+    "sku_class": "puffed_food",
+    "barcode": 6926265388100,
+    "display_name": "Oishi Crab Flavour Snacks 40g",
+    "category_name": "Puffed Snacks"
+  },
+  "5_puffed_food": {
+    "yolo_id": 4,
+    "sku_name": "5_puffed_food",
+    "category_id": 5,
+    "sku_class": "puffed_food",
+    "barcode": 6924743920330,
+    "display_name": "Doritos Charcoal Grilled Flavour 65g",
+    "category_name": "Puffed Snacks"
+  },
+  "6_puffed_food": {
+    "yolo_id": 5,
+    "sku_name": "6_puffed_food",
+    "category_id": 6,
+    "sku_class": "puffed_food",
+    "barcode": 6920912342002,
+    "display_name": "PanPan BBQ Beef Puffs 105g",
+    "category_name": "Puffed Snacks"
+  },
+  "7_puffed_food": {
+    "yolo_id": 6,
+    "sku_name": "7_puffed_food",
+    "category_id": 7,
+    "sku_class": "puffed_food",
+    "barcode": 6926265301024,
+    "display_name": "Oishi Prawn Sticks 40g",
+    "category_name": "Puffed Snacks"
+  },
+  "8_puffed_food": {
+    "yolo_id": 7,
+    "sku_name": "8_puffed_food",
+    "category_id": 8,
+    "sku_class": "puffed_food",
+    "barcode": 6909409040799,
+    "display_name": "Oishi Onion Rings 40g",
+    "category_name": "Puffed Snacks"
+  },
+  "9_puffed_food": {
+    "yolo_id": 8,
+    "sku_name": "9_puffed_food",
+    "category_id": 9,
+    "sku_class": "puffed_food",
+    "barcode": 6926265301130,
+    "display_name": "Oishi Japanese Seaweed Fish Crackers 50g",
+    "category_name": "Puffed Snacks"
+  },
+  "10_puffed_food": {
+    "yolo_id": 9,
+    "sku_name": "10_puffed_food",
+    "category_id": 10,
+    "sku_class": "puffed_food",
+    "barcode": 6924743913721,
+    "display_name": "Cheetos Japanese Steak Flavour 90g",
+    "category_name": "Puffed Snacks"
+  },
+  "11_puffed_food": {
+    "yolo_id": 10,
+    "sku_name": "11_puffed_food",
+    "category_id": 11,
+    "sku_class": "puffed_food",
+    "barcode": 6924743913738,
+    "display_name": "Cheetos American Turkey Flavour 90g",
+    "category_name": "Puffed Snacks"
+  },
+  "12_puffed_food": {
+    "yolo_id": 11,
+    "sku_name": "12_puffed_food",
+    "category_id": 12,
+    "sku_class": "puffed_food",
+    "barcode": 6909409012802,
+    "display_name": "Oishi Corn Sticks Strawberry 40g",
+    "category_name": "Puffed Snacks"
+  },
+  "13_dried_fruit": {
+    "yolo_id": 12,
+    "sku_name": "13_dried_fruit",
+    "category_id": 13,
+    "sku_class": "dried_fruit",
+    "barcode": 6940188803618,
+    "display_name": "GanYuan Crab Roe Melon Seeds 75g",
+    "category_name": "Nuts & Dried Fruit"
+  },
+  "14_dried_fruit": {
+    "yolo_id": 13,
+    "sku_name": "14_dried_fruit",
+    "category_id": 14,
+    "sku_class": "dried_fruit",
+    "barcode": 6907777825963,
+    "display_name": "Huiyi Pistachios 140g",
+    "category_name": "Nuts & Dried Fruit"
+  },
+  "15_dried_fruit": {
+    "yolo_id": 14,
+    "sku_name": "15_dried_fruit",
+    "category_id": 15,
+    "sku_class": "dried_fruit",
+    "barcode": 6907777800519,
+    "display_name": "Huiyi Salted Peanuts 350g",
+    "category_name": "Nuts & Dried Fruit"
+  },
+  "16_dried_fruit": {
+    "yolo_id": 15,
+    "sku_name": "16_dried_fruit",
+    "category_id": 16,
+    "sku_class": "dried_fruit",
+    "barcode": 6907777821811,
+    "display_name": "Huiyi Cashews 160g",
+    "category_name": "Nuts & Dried Fruit"
+  },
+  "17_dried_fruit": {
+    "yolo_id": 16,
+    "sku_name": "17_dried_fruit",
+    "category_id": 17,
+    "sku_class": "dried_fruit",
+    "barcode": 6907777830523,
+    "display_name": "Huiyi Wolfberries 100g",
+    "category_name": "Nuts & Dried Fruit"
+  },
+  "18_dried_fruit": {
+    "yolo_id": 17,
+    "sku_name": "18_dried_fruit",
+    "category_id": 18,
+    "sku_class": "dried_fruit",
+    "barcode": 6907777819061,
+    "display_name": "Huiyi Dried Sweet Potato 228g",
+    "category_name": "Nuts & Dried Fruit"
+  },
+  "19_dried_fruit": {
+    "yolo_id": 18,
+    "sku_name": "19_dried_fruit",
+    "category_id": 19,
+    "sku_class": "dried_fruit",
+    "barcode": 6907777821903,
+    "display_name": "Huiyi Thai Dried Mango 80g",
+    "category_name": "Nuts & Dried Fruit"
+  },
+  "20_dried_fruit": {
+    "yolo_id": 19,
+    "sku_name": "20_dried_fruit",
+    "category_id": 20,
+    "sku_class": "dried_fruit",
+    "barcode": 6907777834712,
+    "display_name": "Huiyi Dried Yellow Peach 75g",
+    "category_name": "Nuts & Dried Fruit"
+  },
+  "21_dried_fruit": {
+    "yolo_id": 20,
+    "sku_name": "21_dried_fruit",
+    "category_id": 21,
+    "sku_class": "dried_fruit",
+    "barcode": 6907777834705,
+    "display_name": "Huiyi Dried Lemon Slices 65g",
+    "category_name": "Nuts & Dried Fruit"
+  },
+  "22_dried_food": {
+    "yolo_id": 21,
+    "sku_name": "22_dried_food",
+    "category_id": 22,
+    "sku_class": "dried_food",
+    "barcode": 6940737300148,
+    "display_name": "Xinjiang Hetian Dates 454g",
+    "category_name": "Dried Goods"
+  },
+  "23_dried_food": {
+    "yolo_id": 22,
+    "sku_name": "23_dried_food",
+    "category_id": 23,
+    "sku_class": "dried_food",
+    "barcode": 6907777831995,
+    "display_name": "Huiyi Shiitake Mushroom 100g",
+    "category_name": "Dried Goods"
+  },
+  "24_dried_food": {
+    "yolo_id": 23,
+    "sku_name": "24_dried_food",
+    "category_id": 24,
+    "sku_class": "dried_food",
+    "barcode": 6907777800151,
+    "display_name": "Huiyi Dried Longan 500g",
+    "category_name": "Dried Goods"
+  },
+  "25_dried_food": {
+    "yolo_id": 24,
+    "sku_name": "25_dried_food",
+    "category_id": 25,
+    "sku_class": "dried_food",
+    "barcode": 6907777808584,
+    "display_name": "Huiyi Tea Tree Mushroom 200g",
+    "category_name": "Dried Goods"
+  },
+  "26_dried_food": {
+    "yolo_id": 25,
+    "sku_name": "26_dried_food",
+    "category_id": 26,
+    "sku_class": "dried_food",
+    "barcode": 6934848931155,
+    "display_name": "Haoxiong Black Fungus 150g",
+    "category_name": "Dried Goods"
+  },
+  "27_dried_food": {
+    "yolo_id": 26,
+    "sku_name": "27_dried_food",
+    "category_id": 27,
+    "sku_class": "dried_food",
+    "barcode": 6907777825468,
+    "display_name": "Huiyi Boiled Peanuts 454g",
+    "category_name": "Dried Goods"
+  },
+  "28_dried_food": {
+    "yolo_id": 27,
+    "sku_name": "28_dried_food",
+    "category_id": 28,
+    "sku_class": "dried_food",
+    "barcode": 6907777815186,
+    "display_name": "Huiyi Day Lily 100g",
+    "category_name": "Dried Goods"
+  },
+  "29_dried_food": {
+    "yolo_id": 28,
+    "sku_name": "29_dried_food",
+    "category_id": 29,
+    "sku_class": "dried_food",
+    "barcode": 6924187829428,
+    "display_name": "Qiaqia Herbal Tea Sunflower Seeds 150g",
+    "category_name": "Dried Goods"
+  },
+  "30_dried_food": {
+    "yolo_id": 29,
+    "sku_name": "30_dried_food",
+    "category_id": 30,
+    "sku_class": "dried_food",
+    "barcode": 6924187828964,
+    "display_name": "Qiaqia Milk Flavour Sunflower Seeds 150g",
+    "category_name": "Dried Goods"
+  },
+  "31_instant_drink": {
+    "yolo_id": 30,
+    "sku_name": "31_instant_drink",
+    "category_id": 31,
+    "sku_class": "instant_drink",
+    "barcode": 6913221220161,
+    "display_name": "Cha Zai Green Tea Bags 50g",
+    "category_name": "Instant Drinks"
+  },
+  "32_instant_drink": {
+    "yolo_id": 31,
+    "sku_name": "32_instant_drink",
+    "category_id": 32,
+    "sku_class": "instant_drink",
+    "barcode": 6913221220109,
+    "display_name": "Cha Zai Black Tea Bags 50g",
+    "category_name": "Instant Drinks"
+  },
+  "33_instant_drink": {
+    "yolo_id": 32,
+    "sku_name": "33_instant_drink",
+    "category_id": 33,
+    "sku_class": "instant_drink",
+    "barcode": 6926475203170,
+    "display_name": "Youleme Taro Milk Tea 80g",
+    "category_name": "Instant Drinks"
+  },
+  "34_instant_drink": {
+    "yolo_id": 33,
+    "sku_name": "34_instant_drink",
+    "category_id": 34,
+    "sku_class": "instant_drink",
+    "barcode": 6926475206263,
+    "display_name": "Youleme Red Bean Milk Tea 65g",
+    "category_name": "Instant Drinks"
+  },
+  "35_instant_drink": {
+    "yolo_id": 34,
+    "sku_name": "35_instant_drink",
+    "category_id": 35,
+    "sku_class": "instant_drink",
+    "barcode": 6959619480205,
+    "display_name": "Huanni Instant Potato Porridge 25g",
+    "category_name": "Instant Drinks"
+  },
+  "36_instant_drink": {
+    "yolo_id": 35,
+    "sku_name": "36_instant_drink",
+    "category_id": 36,
+    "sku_class": "instant_drink",
+    "barcode": 6939947700169,
+    "display_name": "Jiangzhong Monkey Mushroom Rice Porridge 40g",
+    "category_name": "Instant Drinks"
+  },
+  "37_instant_drink": {
+    "yolo_id": 36,
+    "sku_name": "37_instant_drink",
+    "category_id": 37,
+    "sku_class": "instant_drink",
+    "barcode": 6950361040808,
+    "display_name": "Yonghe Sweetened Soy Milk Powder 210g",
+    "category_name": "Instant Drinks"
+  },
+  "38_instant_drink": {
+    "yolo_id": 37,
+    "sku_name": "38_instant_drink",
+    "category_id": 38,
+    "sku_class": "instant_drink",
+    "barcode": 6922848642133,
+    "display_name": "Lipton Lemon Flavour Tea 180g",
+    "category_name": "Instant Drinks"
+  },
+  "39_instant_drink": {
+    "yolo_id": 38,
+    "sku_name": "39_instant_drink",
+    "category_id": 39,
+    "sku_class": "instant_drink",
+    "barcode": 6924743921436,
+    "display_name": "Quaker Mixed Berry Oatmeal 40g",
+    "category_name": "Instant Drinks"
+  },
+  "40_instant_drink": {
+    "yolo_id": 39,
+    "sku_name": "40_instant_drink",
+    "category_id": 40,
+    "sku_class": "instant_drink",
+    "barcode": 6953787800124,
+    "display_name": "Rongyi Cereal Black Rice Flavour 30g",
+    "category_name": "Instant Drinks"
+  },
+  "41_instant_drink": {
+    "yolo_id": 40,
+    "sku_name": "41_instant_drink",
+    "category_id": 41,
+    "sku_class": "instant_drink",
+    "barcode": 6953787800117,
+    "display_name": "Rongyi Cereal Red Bean Flavour 30g",
+    "category_name": "Instant Drinks"
+  },
+  "42_instant_noodles": {
+    "yolo_id": 41,
+    "sku_name": "42_instant_noodles",
+    "category_id": 42,
+    "sku_class": "instant_noodles",
+    "barcode": 6921555581674,
+    "display_name": "Jinye Spicy Beef Noodles 112g",
+    "category_name": "Instant Noodles"
+  },
+  "43_instant_noodles": {
+    "yolo_id": 42,
+    "sku_name": "43_instant_noodles",
+    "category_id": 43,
+    "sku_class": "instant_noodles",
+    "barcode": 6921555510568,
+    "display_name": "Jinye Pickled Cabbage Beef Noodles 118g",
+    "category_name": "Instant Noodles"
+  },
+  "44_instant_noodles": {
+    "yolo_id": 43,
+    "sku_name": "44_instant_noodles",
+    "category_id": 44,
+    "sku_class": "instant_noodles",
+    "barcode": 6921555581667,
+    "display_name": "Jinye Braised Beef Noodles 114g",
+    "category_name": "Instant Noodles"
+  },
+  "45_instant_noodles": {
+    "yolo_id": 44,
+    "sku_name": "45_instant_noodles",
+    "category_id": 45,
+    "sku_class": "instant_noodles",
+    "barcode": 6917536014026,
+    "display_name": "Cup Noodles Seafood Flavour 84g",
+    "category_name": "Instant Noodles"
+  },
+  "46_instant_noodles": {
+    "yolo_id": 45,
+    "sku_name": "46_instant_noodles",
+    "category_id": 46,
+    "sku_class": "instant_noodles",
+    "barcode": 6920152493915,
+    "display_name": "Master Kong White Pepper Pork Rib Noodles 76g",
+    "category_name": "Instant Noodles"
+  },
+  "47_instant_noodles": {
+    "yolo_id": 46,
+    "sku_name": "47_instant_noodles",
+    "category_id": 47,
+    "sku_class": "instant_noodles",
+    "barcode": 6920152400975,
+    "display_name": "Master Kong Spicy Beef Noodles 105g",
+    "category_name": "Instant Noodles"
+  },
+  "48_instant_noodles": {
+    "yolo_id": 47,
+    "sku_name": "48_instant_noodles",
+    "category_id": 48,
+    "sku_class": "instant_noodles",
+    "barcode": 6920152496176,
+    "display_name": "Master Kong Spicy Garlic Pork Rib Noodles 108g",
+    "category_name": "Instant Noodles"
+  },
+  "49_instant_noodles": {
+    "yolo_id": 48,
+    "sku_name": "49_instant_noodles",
+    "category_id": 49,
+    "sku_class": "instant_noodles",
+    "barcode": 6920152497029,
+    "display_name": "Master Kong Sichuan Pepper Beef Noodles 82g",
+    "category_name": "Instant Noodles"
+  },
+  "50_instant_noodles": {
+    "yolo_id": 49,
+    "sku_name": "50_instant_noodles",
+    "category_id": 50,
+    "sku_class": "instant_noodles",
+    "barcode": 6901715291209,
+    "display_name": "Huafeng Chicken Three-Flavour Noodles 87g",
+    "category_name": "Instant Noodles"
+  },
+  "51_instant_noodles": {
+    "yolo_id": 50,
+    "sku_name": "51_instant_noodles",
+    "category_id": 51,
+    "sku_class": "instant_noodles",
+    "barcode": 6920152485095,
+    "display_name": "Master Kong Black Pepper Steak Noodles 104g",
+    "category_name": "Instant Noodles"
+  },
+  "52_instant_noodles": {
+    "yolo_id": 51,
+    "sku_name": "52_instant_noodles",
+    "category_id": 52,
+    "sku_class": "instant_noodles",
+    "barcode": 6936986841044,
+    "display_name": "Wugu Daochang Braised Beef Noodles 100g",
+    "category_name": "Instant Noodles"
+  },
+  "53_instant_noodles": {
+    "yolo_id": 52,
+    "sku_name": "53_instant_noodles",
+    "category_id": 53,
+    "sku_class": "instant_noodles",
+    "barcode": 6920152439005,
+    "display_name": "Master Kong Pickled Cabbage Beef Noodles 114g",
+    "category_name": "Instant Noodles"
+  },
+  "54_dessert": {
+    "yolo_id": 53,
+    "sku_name": "54_dessert",
+    "category_id": 54,
+    "sku_class": "dessert",
+    "barcode": 4894375013507,
+    "display_name": "Aji Puff Biscuits Mango Pineapple 60g",
+    "category_name": "Biscuits & Pastries"
+  },
+  "55_dessert": {
+    "yolo_id": 54,
+    "sku_name": "55_dessert",
+    "category_id": 55,
+    "sku_class": "dessert",
+    "barcode": 6922907011535,
+    "display_name": "Qinglian Blueberry Cream Biscuits 63g",
+    "category_name": "Biscuits & Pastries"
+  },
+  "56_dessert": {
+    "yolo_id": 55,
+    "sku_name": "56_dessert",
+    "category_id": 56,
+    "sku_class": "dessert",
+    "barcode": 6922907011528,
+    "display_name": "Qinglian Pineapple Cream Biscuits 63g",
+    "category_name": "Biscuits & Pastries"
+  },
+  "57_dessert": {
+    "yolo_id": 56,
+    "sku_name": "57_dessert",
+    "category_id": 57,
+    "sku_class": "dessert",
+    "barcode": 6922907011511,
+    "display_name": "Qinglian Strawberry Cream Biscuits 63g",
+    "category_name": "Biscuits & Pastries"
+  },
+  "58_dessert": {
+    "yolo_id": 57,
+    "sku_name": "58_dessert",
+    "category_id": 58,
+    "sku_class": "dessert",
+    "barcode": 6902227014829,
+    "display_name": "Garden Wafer Biscuits Strawberry 50g",
+    "category_name": "Biscuits & Pastries"
+  },
+  "59_dessert": {
+    "yolo_id": 58,
+    "sku_name": "59_dessert",
+    "category_id": 59,
+    "sku_class": "dessert",
+    "barcode": 6902227014843,
+    "display_name": "Garden Wafer Biscuits Lemon 50g",
+    "category_name": "Biscuits & Pastries"
+  },
+  "60_dessert": {
+    "yolo_id": 59,
+    "sku_name": "60_dessert",
+    "category_id": 60,
+    "sku_class": "dessert",
+    "barcode": 6953042700220,
+    "display_name": "Aishile Vanilla Milk Biscuits 50g",
+    "category_name": "Biscuits & Pastries"
+  },
+  "61_dessert": {
+    "yolo_id": 60,
+    "sku_name": "61_dessert",
+    "category_id": 61,
+    "sku_class": "dessert",
+    "barcode": 6953042700206,
+    "display_name": "Aishile Chocolate Biscuits 50g",
+    "category_name": "Biscuits & Pastries"
+  },
+  "62_dessert": {
+    "yolo_id": 61,
+    "sku_name": "62_dessert",
+    "category_id": 62,
+    "sku_class": "dessert",
+    "barcode": 6901845042993,
+    "display_name": "Pretz Seaweed Flavour 60g",
+    "category_name": "Biscuits & Pastries"
+  },
+  "63_dessert": {
+    "yolo_id": 62,
+    "sku_name": "63_dessert",
+    "category_id": 63,
+    "sku_class": "dessert",
+    "barcode": 6901845042627,
+    "display_name": "Pretz Strawberry Milk Flavour 45g",
+    "category_name": "Biscuits & Pastries"
+  },
+  "64_dessert": {
+    "yolo_id": 63,
+    "sku_name": "64_dessert",
+    "category_id": 64,
+    "sku_class": "dessert",
+    "barcode": 6917878035284,
+    "display_name": "Nestle KitKat Crispy 80g",
+    "category_name": "Biscuits & Pastries"
+  },
+  "65_dessert": {
+    "yolo_id": 64,
+    "sku_name": "65_dessert",
+    "category_id": 65,
+    "sku_class": "dessert",
+    "barcode": 8993175540629,
+    "display_name": "Nabati Chocolate Wafer 58g",
+    "category_name": "Biscuits & Pastries"
+  },
+  "66_dessert": {
+    "yolo_id": 65,
+    "sku_name": "66_dessert",
+    "category_id": 66,
+    "sku_class": "dessert",
+    "barcode": 8411145202563,
+    "display_name": "Guili Mediterranean Bread Sticks 50g",
+    "category_name": "Biscuits & Pastries"
+  },
+  "67_dessert": {
+    "yolo_id": 66,
+    "sku_name": "67_dessert",
+    "category_id": 67,
+    "sku_class": "dessert",
+    "barcode": 6920731700205,
+    "display_name": "Master Kong Muffin Chocolate 48g",
+    "category_name": "Biscuits & Pastries"
+  },
+  "68_dessert": {
+    "yolo_id": 67,
+    "sku_name": "68_dessert",
+    "category_id": 68,
+    "sku_class": "dessert",
+    "barcode": 6956367187172,
+    "display_name": "Aixiangqin Sliced Bread 90g",
+    "category_name": "Biscuits & Pastries"
+  },
+  "69_dessert": {
+    "yolo_id": 68,
+    "sku_name": "69_dessert",
+    "category_id": 69,
+    "sku_class": "dessert",
+    "barcode": 6911988005397,
+    "display_name": "Dali Garden Strawberry Pie (Single)",
+    "category_name": "Biscuits & Pastries"
+  },
+  "70_dessert": {
+    "yolo_id": 69,
+    "sku_name": "70_dessert",
+    "category_id": 70,
+    "sku_class": "dessert",
+    "barcode": 6901668054715,
+    "display_name": "Mini Oreo 55g",
+    "category_name": "Biscuits & Pastries"
+  },
+  "71_drink": {
+    "yolo_id": 70,
+    "sku_name": "71_drink",
+    "category_id": 71,
+    "sku_class": "drink",
+    "barcode": 6921168509256,
+    "display_name": "Nongfu Spring Mineral Water 550ml",
+    "category_name": "Beverages"
+  },
+  "72_drink": {
+    "yolo_id": 71,
+    "sku_name": "72_drink",
+    "category_id": 72,
+    "sku_class": "drink",
+    "barcode": 6901285991219,
+    "display_name": "Yibao Mineral Water 555ml",
+    "category_name": "Beverages"
+  },
+  "73_drink": {
+    "yolo_id": 72,
+    "sku_name": "73_drink",
+    "category_id": 73,
+    "sku_class": "drink",
+    "barcode": 6928804010114,
+    "display_name": "Coca-Cola Zero 500ml",
+    "category_name": "Beverages"
+  },
+  "74_drink": {
+    "yolo_id": 73,
+    "sku_name": "74_drink",
+    "category_id": 74,
+    "sku_class": "drink",
+    "barcode": 6928804011173,
+    "display_name": "Coca-Cola 500ml",
+    "category_name": "Beverages"
+  },
+  "75_drink": {
+    "yolo_id": 74,
+    "sku_name": "75_drink",
+    "category_id": 75,
+    "sku_class": "drink",
+    "barcode": 6924882496116,
+    "display_name": "Pepsi Cola 600ml",
+    "category_name": "Beverages"
+  },
+  "76_drink": {
+    "yolo_id": 75,
+    "sku_name": "76_drink",
+    "category_id": 76,
+    "sku_class": "drink",
+    "barcode": 6928804011456,
+    "display_name": "Fanta Apple Flavour 500ml",
+    "category_name": "Beverages"
+  },
+  "77_drink": {
+    "yolo_id": 76,
+    "sku_name": "77_drink",
+    "category_id": 77,
+    "sku_class": "drink",
+    "barcode": 6928804011326,
+    "display_name": "Fanta Orange Flavour 500ml",
+    "category_name": "Beverages"
+  },
+  "78_drink": {
+    "yolo_id": 77,
+    "sku_name": "78_drink",
+    "category_id": 78,
+    "sku_class": "drink",
+    "barcode": 6928804010220,
+    "display_name": "Sprite 500ml",
+    "category_name": "Beverages"
+  },
+  "79_alcohol": {
+    "yolo_id": 78,
+    "sku_name": "79_alcohol",
+    "category_id": 79,
+    "sku_class": "alcohol",
+    "barcode": 6953029710112,
+    "display_name": "Heineken Beer 500ml",
+    "category_name": "Alcohol"
+  },
+  "80_alcohol": {
+    "yolo_id": 79,
+    "sku_name": "80_alcohol",
+    "category_id": 80,
+    "sku_class": "alcohol",
+    "barcode": 6948960100009,
+    "display_name": "Budweiser Beer 600ml",
+    "category_name": "Alcohol"
+  },
+  "81_drink": {
+    "yolo_id": 80,
+    "sku_name": "81_drink",
+    "category_id": 81,
+    "sku_class": "drink",
+    "barcode": 6924882486100,
+    "display_name": "Pepsi Cola 330ml",
+    "category_name": "Beverages"
+  },
+  "82_drink": {
+    "yolo_id": 81,
+    "sku_name": "82_drink",
+    "category_id": 82,
+    "sku_class": "drink",
+    "barcode": 6928804011142,
+    "display_name": "Coca-Cola 330ml",
+    "category_name": "Beverages"
+  },
+  "83_drink": {
+    "yolo_id": 82,
+    "sku_name": "83_drink",
+    "category_id": 83,
+    "sku_class": "drink",
+    "barcode": 6956367338680,
+    "display_name": "Wang Lao Ji Herbal Tea 310ml",
+    "category_name": "Beverages"
+  },
+  "84_drink": {
+    "yolo_id": 83,
+    "sku_name": "84_drink",
+    "category_id": 84,
+    "sku_class": "drink",
+    "barcode": 6921168593576,
+    "display_name": "ChaPai Yuzu Green Tea 500ml",
+    "category_name": "Beverages"
+  },
+  "85_drink": {
+    "yolo_id": 84,
+    "sku_name": "85_drink",
+    "category_id": 85,
+    "sku_class": "drink",
+    "barcode": 6921168593736,
+    "display_name": "ChaPai Rose Lychee Black Tea 500ml",
+    "category_name": "Beverages"
+  },
+  "86_drink": {
+    "yolo_id": 85,
+    "sku_name": "86_drink",
+    "category_id": 86,
+    "sku_class": "drink",
+    "barcode": 6920459902387,
+    "display_name": "Master Kong Iced Black Tea 250ml",
+    "category_name": "Beverages"
+  },
+  "87_drink": {
+    "yolo_id": 86,
+    "sku_name": "87_drink",
+    "category_id": 87,
+    "sku_class": "drink",
+    "barcode": 4891599601138,
+    "display_name": "JDB Herbal Tea 250ml",
+    "category_name": "Beverages"
+  },
+  "88_alcohol": {
+    "yolo_id": 87,
+    "sku_name": "88_alcohol",
+    "category_id": 88,
+    "sku_class": "alcohol",
+    "barcode": 6935145301030,
+    "display_name": "RIO Cocktail Peach Flavour 275ml",
+    "category_name": "Alcohol"
+  },
+  "89_alcohol": {
+    "yolo_id": 88,
+    "sku_name": "89_alcohol",
+    "category_id": 89,
+    "sku_class": "alcohol",
+    "barcode": 6935145301047,
+    "display_name": "RIO Cocktail Whiskey Blue Rose 275ml",
+    "category_name": "Alcohol"
+  },
+  "90_alcohol": {
+    "yolo_id": 89,
+    "sku_name": "90_alcohol",
+    "category_id": 90,
+    "sku_class": "alcohol",
+    "barcode": 6906151601353,
+    "display_name": "Niulanshan Erguotou Baijiu 100ml",
+    "category_name": "Alcohol"
+  },
+  "91_alcohol": {
+    "yolo_id": 90,
+    "sku_name": "91_alcohol",
+    "category_id": 91,
+    "sku_class": "alcohol",
+    "barcode": 6948960100429,
+    "display_name": "Harbin Beer 330ml",
+    "category_name": "Alcohol"
+  },
+  "92_alcohol": {
+    "yolo_id": 91,
+    "sku_name": "92_alcohol",
+    "category_id": 92,
+    "sku_class": "alcohol",
+    "barcode": 6901035613699,
+    "display_name": "Tsingtao Beer 330ml",
+    "category_name": "Alcohol"
+  },
+  "93_alcohol": {
+    "yolo_id": 92,
+    "sku_name": "93_alcohol",
+    "category_id": 93,
+    "sku_class": "alcohol",
+    "barcode": 6949352201106,
+    "display_name": "Snow Beer 330ml",
+    "category_name": "Alcohol"
+  },
+  "94_alcohol": {
+    "yolo_id": 93,
+    "sku_name": "94_alcohol",
+    "category_id": 94,
+    "sku_class": "alcohol",
+    "barcode": 6948960100993,
+    "display_name": "Harbin Beer 500ml",
+    "category_name": "Alcohol"
+  },
+  "95_alcohol": {
+    "yolo_id": 94,
+    "sku_name": "95_alcohol",
+    "category_id": 95,
+    "sku_class": "alcohol",
+    "barcode": 8410793186126,
+    "display_name": "Keler Beer 500ml",
+    "category_name": "Alcohol"
+  },
+  "96_alcohol": {
+    "yolo_id": 95,
+    "sku_name": "96_alcohol",
+    "category_id": 96,
+    "sku_class": "alcohol",
+    "barcode": 6948960100078,
+    "display_name": "Budweiser Beer 500ml",
+    "category_name": "Alcohol"
+  },
+  "97_milk": {
+    "yolo_id": 96,
+    "sku_name": "97_milk",
+    "category_id": 97,
+    "sku_class": "milk",
+    "barcode": 6907992510446,
+    "display_name": "QQ Star Full Nutrition Milk 125ml",
+    "category_name": "Dairy"
+  },
+  "98_milk": {
+    "yolo_id": 97,
+    "sku_name": "98_milk",
+    "category_id": 98,
+    "sku_class": "milk",
+    "barcode": 6907992511559,
+    "display_name": "QQ Star Balanced Diet Milk 125ml",
+    "category_name": "Dairy"
+  },
+  "99_milk": {
+    "yolo_id": 98,
+    "sku_name": "99_milk",
+    "category_id": 99,
+    "sku_class": "milk",
+    "barcode": 6902083881085,
+    "display_name": "Wahaha AD Calcium Milk 220g",
+    "category_name": "Dairy"
+  },
+  "100_milk": {
+    "yolo_id": 99,
+    "sku_name": "100_milk",
+    "category_id": 100,
+    "sku_class": "milk",
+    "barcode": 6959791800068,
+    "display_name": "Huolibao Energy Drink 105ml",
+    "category_name": "Dairy"
+  },
+  "101_milk": {
+    "yolo_id": 100,
+    "sku_name": "101_milk",
+    "category_id": 101,
+    "sku_class": "milk",
+    "barcode": 6931958014105,
+    "display_name": "Want Want Milk 250ml",
+    "category_name": "Dairy"
+  },
+  "102_milk": {
+    "yolo_id": 101,
+    "sku_name": "102_milk",
+    "category_id": 102,
+    "sku_class": "milk",
+    "barcode": 6907992100272,
+    "display_name": "Yili Pure Milk 250ml",
+    "category_name": "Dairy"
+  },
+  "103_milk": {
+    "yolo_id": 102,
+    "sku_name": "103_milk",
+    "category_id": 103,
+    "sku_class": "milk",
+    "barcode": 4891028707851,
+    "display_name": "Vitasoy Low Sugar Soy Milk 250ml",
+    "category_name": "Dairy"
+  },
+  "104_milk": {
+    "yolo_id": 103,
+    "sku_name": "104_milk",
+    "category_id": 104,
+    "sku_class": "milk",
+    "barcode": 6941543400251,
+    "display_name": "Baiyi Peanut Milk 250ml",
+    "category_name": "Dairy"
+  },
+  "105_milk": {
+    "yolo_id": 104,
+    "sku_name": "105_milk",
+    "category_id": 105,
+    "sku_class": "milk",
+    "barcode": 6907777822948,
+    "display_name": "Huiyi Original Soy Milk 250ml",
+    "category_name": "Dairy"
+  },
+  "106_milk": {
+    "yolo_id": 105,
+    "sku_name": "106_milk",
+    "category_id": 106,
+    "sku_class": "milk",
+    "barcode": 6907992500010,
+    "display_name": "Yili Yogurt Milk 250ml",
+    "category_name": "Dairy"
+  },
+  "107_milk": {
+    "yolo_id": 106,
+    "sku_name": "107_milk",
+    "category_id": 107,
+    "sku_class": "milk",
+    "barcode": 6907992504476,
+    "display_name": "Yili Breakfast Milk 250ml",
+    "category_name": "Dairy"
+  },
+  "108_canned_food": {
+    "yolo_id": 107,
+    "sku_name": "108_canned_food",
+    "category_id": 108,
+    "sku_class": "canned_food",
+    "barcode": 6911988011985,
+    "display_name": "Dali Garden Longan Lotus Seed 360g",
+    "category_name": "Canned Food"
+  },
+  "109_canned_food": {
+    "yolo_id": 108,
+    "sku_name": "109_canned_food",
+    "category_id": 109,
+    "sku_class": "canned_food",
+    "barcode": 6926892562096,
+    "display_name": "Silver Heron Rock Sugar Lily White Fungus 280g",
+    "category_name": "Canned Food"
+  },
+  "110_canned_food": {
+    "yolo_id": 109,
+    "sku_name": "110_canned_food",
+    "category_id": 110,
+    "sku_class": "canned_food",
+    "barcode": 6923523998019,
+    "display_name": "Xidodo Mixed Coconut Jelly 567g",
+    "category_name": "Canned Food"
+  },
+  "111_canned_food": {
+    "yolo_id": 110,
+    "sku_name": "111_canned_food",
+    "category_id": 111,
+    "sku_class": "canned_food",
+    "barcode": 4800009004827,
+    "display_name": "Dole Pineapple Chunks 567g",
+    "category_name": "Canned Food"
+  },
+  "112_canned_food": {
+    "yolo_id": 111,
+    "sku_name": "112_canned_food",
+    "category_id": 112,
+    "sku_class": "canned_food",
+    "barcode": 38900004095,
+    "display_name": "Dole Pineapple Chunks 234g",
+    "category_name": "Canned Food"
+  },
+  "113_canned_food": {
+    "yolo_id": 112,
+    "sku_name": "113_canned_food",
+    "category_id": 113,
+    "sku_class": "canned_food",
+    "barcode": 6926892567084,
+    "display_name": "Silver Heron Barley Red Bean Porridge 280g",
+    "category_name": "Canned Food"
+  },
+  "114_canned_food": {
+    "yolo_id": 113,
+    "sku_name": "114_canned_food",
+    "category_id": 114,
+    "sku_class": "canned_food",
+    "barcode": 6926892565080,
+    "display_name": "Silver Heron Lotus Seed Corn Porridge 280g",
+    "category_name": "Canned Food"
+  },
+  "115_canned_food": {
+    "yolo_id": 114,
+    "sku_name": "115_canned_food",
+    "category_id": 115,
+    "sku_class": "canned_food",
+    "barcode": 6926892501033,
+    "display_name": "Silver Heron Purple Yam Rice Porridge 280g",
+    "category_name": "Canned Food"
+  },
+  "116_canned_food": {
+    "yolo_id": 115,
+    "sku_name": "116_canned_food",
+    "category_id": 116,
+    "sku_class": "canned_food",
+    "barcode": 6926892568081,
+    "display_name": "Silver Heron Coconut Oat Porridge 280g",
+    "category_name": "Canned Food"
+  },
+  "117_canned_food": {
+    "yolo_id": 116,
+    "sku_name": "117_canned_food",
+    "category_id": 117,
+    "sku_class": "canned_food",
+    "barcode": 6926892562003,
+    "display_name": "Silver Heron Brown Sugar Longan 280g",
+    "category_name": "Canned Food"
+  },
+  "118_canned_food": {
+    "yolo_id": 117,
+    "sku_name": "118_canned_food",
+    "category_id": 118,
+    "sku_class": "canned_food",
+    "barcode": 6902131110167,
+    "display_name": "Maling Luncheon Meat 340g",
+    "category_name": "Canned Food"
+  },
+  "119_canned_food": {
+    "yolo_id": 118,
+    "sku_name": "119_canned_food",
+    "category_id": 119,
+    "sku_class": "canned_food",
+    "barcode": 6916880292012,
+    "display_name": "Pearl River Bridge Black Bean Fish 150g",
+    "category_name": "Canned Food"
+  },
+  "120_canned_food": {
+    "yolo_id": 119,
+    "sku_name": "120_canned_food",
+    "category_id": 120,
+    "sku_class": "canned_food",
+    "barcode": 6901073808347,
+    "display_name": "Gulong Yellow Croaker 120g",
+    "category_name": "Canned Food"
+  },
+  "121_canned_food": {
+    "yolo_id": 120,
+    "sku_name": "121_canned_food",
+    "category_id": 121,
+    "sku_class": "canned_food",
+    "barcode": 9556041603720,
+    "display_name": "Cock Brand Coconut Cream 140ml",
+    "category_name": "Canned Food"
+  },
+  "122_chocolate": {
+    "yolo_id": 121,
+    "sku_name": "122_chocolate",
+    "category_id": 122,
+    "sku_class": "chocolate",
+    "barcode": 6914973608351,
+    "display_name": "Dove Mango Yogurt Chocolate 42g",
+    "category_name": "Chocolate"
+  },
+  "123_chocolate": {
+    "yolo_id": 122,
+    "sku_name": "123_chocolate",
+    "category_id": 123,
+    "sku_class": "chocolate",
+    "barcode": 6914973604056,
+    "display_name": "Dove Mocha Almond Chocolate 43g",
+    "category_name": "Chocolate"
+  },
+  "124_chocolate": {
+    "yolo_id": 123,
+    "sku_name": "124_chocolate",
+    "category_id": 124,
+    "sku_class": "chocolate",
+    "barcode": 6914973608306,
+    "display_name": "Dove Passion Fruit White Chocolate 42g",
+    "category_name": "Chocolate"
+  },
+  "125_chocolate": {
+    "yolo_id": 124,
+    "sku_name": "125_chocolate",
+    "category_id": 125,
+    "sku_class": "chocolate",
+    "barcode": 6914973105386,
+    "display_name": "M&M's Peanut Milk Chocolate 40g",
+    "category_name": "Chocolate"
+  },
+  "126_chocolate": {
+    "yolo_id": 125,
+    "sku_name": "126_chocolate",
+    "category_id": 126,
+    "sku_class": "chocolate",
+    "barcode": 6914973105379,
+    "display_name": "M&M's Milk Chocolate 40g",
+    "category_name": "Chocolate"
+  },
+  "127_chocolate": {
+    "yolo_id": 126,
+    "sku_name": "127_chocolate",
+    "category_id": 127,
+    "sku_class": "chocolate",
+    "barcode": 6942836705916,
+    "display_name": "Hershey's Milk Chocolate 40g",
+    "category_name": "Chocolate"
+  },
+  "128_chocolate": {
+    "yolo_id": 127,
+    "sku_name": "128_chocolate",
+    "category_id": 128,
+    "sku_class": "chocolate",
+    "barcode": 6942836705435,
+    "display_name": "Hershey's Cookies & Cream White Chocolate 40g",
+    "category_name": "Chocolate"
+  },
+  "129_chocolate": {
+    "yolo_id": 128,
+    "sku_name": "129_chocolate",
+    "category_id": 129,
+    "sku_class": "chocolate",
+    "barcode": 6914973607101,
+    "display_name": "Crispy Rice Seaweed White Chocolate 24g",
+    "category_name": "Chocolate"
+  },
+  "130_chocolate": {
+    "yolo_id": 129,
+    "sku_name": "130_chocolate",
+    "category_id": 130,
+    "sku_class": "chocolate",
+    "barcode": 6914973604469,
+    "display_name": "Crispy Rice Milk White Chocolate 24g",
+    "category_name": "Chocolate"
+  },
+  "131_chocolate": {
+    "yolo_id": 130,
+    "sku_name": "131_chocolate",
+    "category_id": 131,
+    "sku_class": "chocolate",
+    "barcode": 6914973603394,
+    "display_name": "Snickers Peanut Chocolate 51g",
+    "category_name": "Chocolate"
+  },
+  "132_chocolate": {
+    "yolo_id": 131,
+    "sku_name": "132_chocolate",
+    "category_id": 132,
+    "sku_class": "chocolate",
+    "barcode": 6914973607125,
+    "display_name": "Snickers Oat Peanut Chocolate 40g",
+    "category_name": "Chocolate"
+  },
+  "133_chocolate": {
+    "yolo_id": 132,
+    "sku_name": "133_chocolate",
+    "category_id": 133,
+    "sku_class": "chocolate",
+    "barcode": 6914973607637,
+    "display_name": "Snickers Spicy Peanut Chocolate 40g",
+    "category_name": "Chocolate"
+  },
+  "134_gum": {
+    "yolo_id": 133,
+    "sku_name": "134_gum",
+    "category_id": 134,
+    "sku_class": "gum",
+    "barcode": 6924513908216,
+    "display_name": "Stride Fruit Mint Flavour 37g",
+    "category_name": "Chewing Gum"
+  },
+  "135_gum": {
+    "yolo_id": 134,
+    "sku_name": "135_gum",
+    "category_id": 135,
+    "sku_class": "gum",
+    "barcode": 6924513908155,
+    "display_name": "Stride Fruit Lemon Flavour 37g",
+    "category_name": "Chewing Gum"
+  },
+  "136_gum": {
+    "yolo_id": 135,
+    "sku_name": "136_gum",
+    "category_id": 136,
+    "sku_class": "gum",
+    "barcode": 6954432710218,
+    "display_name": "Stride Mint Flavour 21g",
+    "category_name": "Chewing Gum"
+  },
+  "137_gum": {
+    "yolo_id": 136,
+    "sku_name": "137_gum",
+    "category_id": 137,
+    "sku_class": "gum",
+    "barcode": 6954432710621,
+    "display_name": "Stride Grape Flavour 21g",
+    "category_name": "Chewing Gum"
+  },
+  "138_gum": {
+    "yolo_id": 137,
+    "sku_name": "138_gum",
+    "category_id": 138,
+    "sku_class": "gum",
+    "barcode": 6954432710249,
+    "display_name": "Stride Watermelon Flavour 21g",
+    "category_name": "Chewing Gum"
+  },
+  "139_gum": {
+    "yolo_id": 138,
+    "sku_name": "139_gum",
+    "category_id": 139,
+    "sku_class": "gum",
+    "barcode": 6954432710645,
+    "display_name": "Stride Grape Flavour 50g",
+    "category_name": "Chewing Gum"
+  },
+  "140_gum": {
+    "yolo_id": 139,
+    "sku_name": "140_gum",
+    "category_id": 140,
+    "sku_class": "gum",
+    "barcode": 6923450605981,
+    "display_name": "Extra Sugar-Free Mint Jasmine Tea 34g",
+    "category_name": "Chewing Gum"
+  },
+  "141_gum": {
+    "yolo_id": 140,
+    "sku_name": "141_gum",
+    "category_id": 141,
+    "sku_class": "gum",
+    "barcode": 69019388,
+    "display_name": "Extra Gum 5-Piece Pack 15g",
+    "category_name": "Chewing Gum"
+  },
+  "142_candy": {
+    "yolo_id": 141,
+    "sku_name": "142_candy",
+    "category_id": 142,
+    "sku_class": "candy",
+    "barcode": 6911316101043,
+    "display_name": "Big Babol Cotton Candy Gum Cola 11g",
+    "category_name": "Candy"
+  },
+  "143_candy": {
+    "yolo_id": 142,
+    "sku_name": "143_candy",
+    "category_id": 143,
+    "sku_class": "candy",
+    "barcode": 6911316101012,
+    "display_name": "Big Babol Cotton Candy Gum Grape 11g",
+    "category_name": "Candy"
+  },
+  "144_candy": {
+    "yolo_id": 143,
+    "sku_name": "144_candy",
+    "category_id": 144,
+    "sku_class": "candy",
+    "barcode": 6923450663981,
+    "display_name": "Starburst Original Fruit Chews 25g",
+    "category_name": "Candy"
+  },
+  "145_candy": {
+    "yolo_id": 144,
+    "sku_name": "145_candy",
+    "category_id": 145,
+    "sku_class": "candy",
+    "barcode": 6911316510005,
+    "display_name": "Alps Caramel Milk Hard Candy 45g",
+    "category_name": "Candy"
+  },
+  "146_candy": {
+    "yolo_id": 145,
+    "sku_name": "146_candy",
+    "category_id": 146,
+    "sku_class": "candy",
+    "barcode": 6911316380288,
+    "display_name": "Alps Milk Soft Candy Peach Yogurt 47g",
+    "category_name": "Candy"
+  },
+  "147_candy": {
+    "yolo_id": 146,
+    "sku_name": "147_candy",
+    "category_id": 147,
+    "sku_class": "candy",
+    "barcode": 6911316380271,
+    "display_name": "Alps Milk Soft Candy Blueberry Yogurt 47g",
+    "category_name": "Candy"
+  },
+  "148_candy": {
+    "yolo_id": 147,
+    "sku_name": "148_candy",
+    "category_id": 148,
+    "sku_class": "candy",
+    "barcode": 6901424286213,
+    "display_name": "Wang Lao Ji Throat Lozenges 28g",
+    "category_name": "Candy"
+  },
+  "149_candy": {
+    "yolo_id": 148,
+    "sku_name": "149_candy",
+    "category_id": 149,
+    "sku_class": "candy",
+    "barcode": 6907992632483,
+    "display_name": "Yili Milk Tablet Blueberry 32g",
+    "category_name": "Candy"
+  },
+  "150_candy": {
+    "yolo_id": 149,
+    "sku_name": "150_candy",
+    "category_id": 150,
+    "sku_class": "candy",
+    "barcode": 6914782114371,
+    "display_name": "Dr. Bear Chewy Candy Strawberry Milk 52g",
+    "category_name": "Candy"
+  },
+  "151_candy": {
+    "yolo_id": 150,
+    "sku_name": "151_candy",
+    "category_id": 151,
+    "sku_class": "candy",
+    "barcode": 6923450603550,
+    "display_name": "Skittles Original Fruit 45g",
+    "category_name": "Candy"
+  },
+  "152_seasoner": {
+    "yolo_id": 151,
+    "sku_name": "152_seasoner",
+    "category_id": 152,
+    "sku_class": "seasoner",
+    "barcode": 6932107253215,
+    "display_name": "Baoding Rice Vinegar 245ml",
+    "category_name": "Condiments"
+  },
+  "153_seasoner": {
+    "yolo_id": 152,
+    "sku_name": "153_seasoner",
+    "category_id": 153,
+    "sku_class": "seasoner",
+    "barcode": 6902007030087,
+    "display_name": "Hengshun Fragrant Vinegar 340ml",
+    "category_name": "Condiments"
+  },
+  "154_seasoner": {
+    "yolo_id": 153,
+    "sku_name": "154_seasoner",
+    "category_id": 154,
+    "sku_class": "seasoner",
+    "barcode": 6922130119954,
+    "display_name": "Taitaile Chicken Essence 200g",
+    "category_name": "Condiments"
+  },
+  "155_seasoner": {
+    "yolo_id": 154,
+    "sku_name": "155_seasoner",
+    "category_id": 155,
+    "sku_class": "seasoner",
+    "barcode": 6913102210618,
+    "display_name": "Knorr Mushroom Chicken Soup Mix 41g",
+    "category_name": "Condiments"
+  },
+  "156_seasoner": {
+    "yolo_id": 155,
+    "sku_name": "156_seasoner",
+    "category_id": 156,
+    "sku_class": "seasoner",
+    "barcode": 6907777820708,
+    "display_name": "Huiyi Chilli Powder 15g",
+    "category_name": "Condiments"
+  },
+  "157_seasoner": {
+    "yolo_id": 156,
+    "sku_name": "157_seasoner",
+    "category_id": 157,
+    "sku_class": "seasoner",
+    "barcode": 6907777820722,
+    "display_name": "Huiyi Ginger Powder 15g",
+    "category_name": "Condiments"
+  },
+  "158_seasoner": {
+    "yolo_id": 157,
+    "sku_name": "158_seasoner",
+    "category_id": 158,
+    "sku_class": "seasoner",
+    "barcode": 6901844710114,
+    "display_name": "McCormick Pepper Salt 20g",
+    "category_name": "Condiments"
+  },
+  "159_seasoner": {
+    "yolo_id": 158,
+    "sku_name": "159_seasoner",
+    "category_id": 159,
+    "sku_class": "seasoner",
+    "barcode": 6920181360936,
+    "display_name": "Haixing Iodised Salt 400g",
+    "category_name": "Condiments"
+  },
+  "160_seasoner": {
+    "yolo_id": 159,
+    "sku_name": "160_seasoner",
+    "category_id": 160,
+    "sku_class": "seasoner",
+    "barcode": 6930096350922,
+    "display_name": "Hengshun Cooking Wine 500ml",
+    "category_name": "Condiments"
+  },
+  "161_seasoner": {
+    "yolo_id": 160,
+    "sku_name": "161_seasoner",
+    "category_id": 161,
+    "sku_class": "seasoner",
+    "barcode": 6911567886393,
+    "display_name": "Donggu Soy Sauce 150ml",
+    "category_name": "Condiments"
+  },
+  "162_seasoner": {
+    "yolo_id": 161,
+    "sku_name": "162_seasoner",
+    "category_id": 162,
+    "sku_class": "seasoner",
+    "barcode": 6911567881060,
+    "display_name": "Donggu Premium Soy Sauce 150ml",
+    "category_name": "Condiments"
+  },
+  "163_seasoner": {
+    "yolo_id": 162,
+    "sku_name": "163_seasoner",
+    "category_id": 163,
+    "sku_class": "seasoner",
+    "barcode": 6925843403303,
+    "display_name": "Xinhe June Fresh Soy Sauce 160ml",
+    "category_name": "Condiments"
+  },
+  "164_personal_hygiene": {
+    "yolo_id": 163,
+    "sku_name": "164_personal_hygiene",
+    "category_id": 164,
+    "sku_class": "personal_hygiene",
+    "barcode": 6907376820598,
+    "display_name": "Listerine Zero Mouthwash 80ml",
+    "category_name": "Personal Care"
+  },
+  "165_personal_hygiene": {
+    "yolo_id": 164,
+    "sku_name": "165_personal_hygiene",
+    "category_id": 165,
+    "sku_class": "personal_hygiene",
+    "barcode": 6903148232965,
+    "display_name": "Safeguard Pure White Body Wash 100ml",
+    "category_name": "Personal Care"
+  },
+  "166_personal_hygiene": {
+    "yolo_id": 165,
+    "sku_name": "166_personal_hygiene",
+    "category_id": 166,
+    "sku_class": "personal_hygiene",
+    "barcode": 6924882349016,
+    "display_name": "Meitao Styling Gel 60ml",
+    "category_name": "Personal Care"
+  },
+  "167_personal_hygiene": {
+    "yolo_id": 166,
+    "sku_name": "167_personal_hygiene",
+    "category_id": 167,
+    "sku_class": "personal_hygiene",
+    "barcode": 6902088119435,
+    "display_name": "Clear Men Shampoo Active Sport Mint 50ml",
+    "category_name": "Personal Care"
+  },
+  "168_personal_hygiene": {
+    "yolo_id": 167,
+    "sku_name": "168_personal_hygiene",
+    "category_id": 168,
+    "sku_class": "personal_hygiene",
+    "barcode": 6902022138102,
+    "display_name": "Blue Moon Laundry Liquid 80g",
+    "category_name": "Personal Care"
+  },
+  "169_personal_hygiene": {
+    "yolo_id": 168,
+    "sku_name": "169_personal_hygiene",
+    "category_id": 169,
+    "sku_class": "personal_hygiene",
+    "barcode": 6920354818585,
+    "display_name": "Colgate Whitening Baking Soda Toothpaste 180g",
+    "category_name": "Personal Care"
+  },
+  "170_personal_hygiene": {
+    "yolo_id": 169,
+    "sku_name": "170_personal_hygiene",
+    "category_id": 170,
+    "sku_class": "personal_hygiene",
+    "barcode": 6920354808388,
+    "display_name": "Colgate Ice Fresh Toothpaste 180g",
+    "category_name": "Personal Care"
+  },
+  "171_personal_hygiene": {
+    "yolo_id": 170,
+    "sku_name": "171_personal_hygiene",
+    "category_id": 171,
+    "sku_class": "personal_hygiene",
+    "barcode": 6921469850194,
+    "display_name": "Shuoliang Whitening Toothpaste 80g",
+    "category_name": "Personal Care"
+  },
+  "172_personal_hygiene": {
+    "yolo_id": 171,
+    "sku_name": "172_personal_hygiene",
+    "category_id": 172,
+    "sku_class": "personal_hygiene",
+    "barcode": 6901070600128,
+    "display_name": "Yunnan Baiyao Toothpaste 45g",
+    "category_name": "Personal Care"
+  },
+  "173_personal_hygiene": {
+    "yolo_id": 172,
+    "sku_name": "173_personal_hygiene",
+    "category_id": 173,
+    "sku_class": "personal_hygiene",
+    "barcode": 6940477401396,
+    "display_name": "Shu Ke Baby Children's Toothbrush",
+    "category_name": "Personal Care"
+  },
+  "174_tissue": {
+    "yolo_id": 173,
+    "sku_name": "174_tissue",
+    "category_id": 174,
+    "sku_class": "tissue",
+    "barcode": 6922266452949,
+    "display_name": "Qingfeng Pure Wood Gold 100x3",
+    "category_name": "Tissue Paper"
+  },
+  "175_tissue": {
+    "yolo_id": 174,
+    "sku_name": "175_tissue",
+    "category_id": 175,
+    "sku_class": "tissue",
+    "barcode": 6914068016115,
+    "display_name": "Jierou Face Tissue 150x3",
+    "category_name": "Tissue Paper"
+  },
+  "176_tissue": {
+    "yolo_id": 175,
+    "sku_name": "176_tissue",
+    "category_id": 176,
+    "sku_class": "tissue",
+    "barcode": 6953631801604,
+    "display_name": "Bambu Tissue 100x3",
+    "category_name": "Tissue Paper"
+  },
+  "177_tissue": {
+    "yolo_id": 176,
+    "sku_name": "177_tissue",
+    "category_id": 177,
+    "sku_class": "tissue",
+    "barcode": 6901236378823,
+    "display_name": "Vinda Baby Tissue 150x3",
+    "category_name": "Tissue Paper"
+  },
+  "178_tissue": {
+    "yolo_id": 177,
+    "sku_name": "178_tissue",
+    "category_id": 178,
+    "sku_class": "tissue",
+    "barcode": 6922868286249,
+    "display_name": "Xiang Yin Minion Tissue 150x3",
+    "category_name": "Tissue Paper"
+  },
+  "179_tissue": {
+    "yolo_id": 178,
+    "sku_name": "179_tissue",
+    "category_id": 179,
+    "sku_class": "tissue",
+    "barcode": 6922266457616,
+    "display_name": "Qingfeng Pure Wood Black 150x3",
+    "category_name": "Tissue Paper"
+  },
+  "180_tissue": {
+    "yolo_id": 179,
+    "sku_name": "180_tissue",
+    "category_id": 180,
+    "sku_class": "tissue",
+    "barcode": 6918717002160,
+    "display_name": "Jieyun Soft Touch Tissue 130x3",
+    "category_name": "Tissue Paper"
+  },
+  "181_tissue": {
+    "yolo_id": 180,
+    "sku_name": "181_tissue",
+    "category_id": 181,
+    "sku_class": "tissue",
+    "barcode": 6923589421131,
+    "display_name": "Scottie Floral Print Tissue 120x2",
+    "category_name": "Tissue Paper"
+  },
+  "182_tissue": {
+    "yolo_id": 181,
+    "sku_name": "182_tissue",
+    "category_id": 182,
+    "sku_class": "tissue",
+    "barcode": 6903244670166,
+    "display_name": "Xiang Yin Red Joy Tissue 130x3",
+    "category_name": "Tissue Paper"
+  },
+  "183_tissue": {
+    "yolo_id": 182,
+    "sku_name": "183_tissue",
+    "category_id": 183,
+    "sku_class": "tissue",
+    "barcode": 6947509910727,
+    "display_name": "Tempo Apple Wood Tissue 90x4",
+    "category_name": "Tissue Paper"
+  },
+  "184_tissue": {
+    "yolo_id": 183,
+    "sku_name": "184_tissue",
+    "category_id": 184,
+    "sku_class": "tissue",
+    "barcode": 6922266449611,
+    "display_name": "Qingfeng New Soft Pure Tissue 130x3",
+    "category_name": "Tissue Paper"
+  },
+  "185_tissue": {
+    "yolo_id": 184,
+    "sku_name": "185_tissue",
+    "category_id": 185,
+    "sku_class": "tissue",
+    "barcode": 6951481302241,
+    "display_name": "Goldfish Bamboo Tissue 135x3",
+    "category_name": "Tissue Paper"
+  },
+  "186_tissue": {
+    "yolo_id": 185,
+    "sku_name": "186_tissue",
+    "category_id": 186,
+    "sku_class": "tissue",
+    "barcode": 6922266444463,
+    "display_name": "Qingfeng Pure Wood Tissue 150x2",
+    "category_name": "Tissue Paper"
+  },
+  "187_tissue": {
+    "yolo_id": 186,
+    "sku_name": "187_tissue",
+    "category_id": 187,
+    "sku_class": "tissue",
+    "barcode": 6914068018171,
+    "display_name": "Jierou Face Tissue 130x3",
+    "category_name": "Tissue Paper"
+  },
+  "188_tissue": {
+    "yolo_id": 187,
+    "sku_name": "188_tissue",
+    "category_id": 188,
+    "sku_class": "tissue",
+    "barcode": 6901236344033,
+    "display_name": "Vinda 3D Tissue 110x3",
+    "category_name": "Tissue Paper"
+  },
+  "189_tissue": {
+    "yolo_id": 188,
+    "sku_name": "189_tissue",
+    "category_id": 189,
+    "sku_class": "tissue",
+    "barcode": 6914068016535,
+    "display_name": "Jierou CS Single Pack",
+    "category_name": "Tissue Paper"
+  },
+  "190_tissue": {
+    "yolo_id": 189,
+    "sku_name": "190_tissue",
+    "category_id": 190,
+    "sku_class": "tissue",
+    "barcode": 6922868282265,
+    "display_name": "Xiang Yin Minion Single Pack",
+    "category_name": "Tissue Paper"
+  },
+  "191_tissue": {
+    "yolo_id": 190,
+    "sku_name": "191_tissue",
+    "category_id": 191,
+    "sku_class": "tissue",
+    "barcode": 6922266457425,
+    "display_name": "Qingfeng Natural Single Pack",
+    "category_name": "Tissue Paper"
+  },
+  "192_tissue": {
+    "yolo_id": 191,
+    "sku_name": "192_tissue",
+    "category_id": 192,
+    "sku_class": "tissue",
+    "barcode": 6922868290932,
+    "display_name": "Xiang Yin Tea Single Pack",
+    "category_name": "Tissue Paper"
+  },
+  "193_tissue": {
+    "yolo_id": 192,
+    "sku_name": "193_tissue",
+    "category_id": 193,
+    "sku_class": "tissue",
+    "barcode": 6922266426001,
+    "display_name": "Qingfeng Premium Single Pack",
+    "category_name": "Tissue Paper"
+  },
+  "194_stationery": {
+    "yolo_id": 193,
+    "sku_name": "194_stationery",
+    "category_id": 194,
+    "sku_class": "stationery",
+    "barcode": 6901687353417,
+    "display_name": "Mickey 1928 Notebook",
+    "category_name": "Stationery"
+  },
+  "195_stationery": {
+    "yolo_id": 194,
+    "sku_name": "195_stationery",
+    "category_id": 195,
+    "sku_class": "stationery",
+    "barcode": 6930114504085,
+    "display_name": "Guangbo Glue Stick 15g",
+    "category_name": "Stationery"
+  },
+  "196_stationery": {
+    "yolo_id": 195,
+    "sku_name": "196_stationery",
+    "category_id": 196,
+    "sku_class": "stationery",
+    "barcode": 6951384903194,
+    "display_name": "Document Folder",
+    "category_name": "Stationery"
+  },
+  "197_stationery": {
+    "yolo_id": 196,
+    "sku_name": "197_stationery",
+    "category_id": 197,
+    "sku_class": "stationery",
+    "barcode": 6933631504811,
+    "display_name": "M&G Snail Correction Tape",
+    "category_name": "Stationery"
+  },
+  "198_stationery": {
+    "yolo_id": 197,
+    "sku_name": "198_stationery",
+    "category_id": 198,
+    "sku_class": "stationery",
+    "barcode": 6933093050208,
+    "display_name": "Hongtai Liquid Glue 50g",
+    "category_name": "Stationery"
+  },
+  "199_stationery": {
+    "yolo_id": 198,
+    "sku_name": "199_stationery",
+    "category_id": 199,
+    "sku_class": "stationery",
+    "barcode": 6939789303252,
+    "display_name": "Maped Self-Adhesive Labels",
+    "category_name": "Stationery"
+  },
+  "200_stationery": {
+    "yolo_id": 199,
+    "sku_name": "200_stationery",
+    "category_id": 200,
+    "sku_class": "stationery",
+    "barcode": 6925792550042,
+    "display_name": "East Asia Marker Pen",
+    "category_name": "Stationery"
+  }
+}

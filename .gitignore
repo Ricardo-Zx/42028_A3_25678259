@@ -1,0 +1,11 @@
+.DS_Store
+__pycache__/
+*.pyc
+.idea/
+.claude/
+.venv/
+venv/
+db.sqlite3
+media/
+/webapp/media/
+staticfiles/

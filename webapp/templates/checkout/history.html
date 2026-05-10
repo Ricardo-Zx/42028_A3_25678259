@@ -1,0 +1,103 @@
+{% extends "checkout/base.html" %}
+
+{% block title %}Checkout History{% endblock %}
+{% block page_title %}Checkout History{% endblock %}
+
+{% block extra_head %}
+<style>
+  .list-item {
+    grid-template-columns: 2fr 1fr 1fr 1fr 1.2fr auto;
+  }
+  .list-item a.edit-link {
+    color: #1a4d6b;
+    font-weight: 600;
+    text-decoration: none;
+  }
+  .list-item a.edit-link:hover { text-decoration: underline; }
+  .del-btn {
+    background: none;
+    border: 1px solid #e0c4c4;
+    border-radius: 8px;
+    color: #a12727;
+    font-size: 13px;
+    padding: 5px 10px;
+    cursor: pointer;
+    white-space: nowrap;
+    transition: background 0.15s;
+  }
+  .del-btn:hover { background: #fff1f1; }
+  .del-btn:disabled { opacity: 0.45; cursor: not-allowed; }
+</style>
+{% endblock %}
+
+{% block content %}
+  <div class="list-panel">
+    <div class="list-item header">
+      <div>Session</div>
+      <div>Status</div>
+      <div>Items</div>
+      <div>Total</div>
+      <div>Completed</div>
+      <div></div>
+    </div>
+    {% for session in sessions %}
+    <div class="list-item" id="row-{{ session.id }}">
+      <div>
+        {% if session.status == "completed" %}
+          <a class="edit-link" href="{% url 'receipt' session.id %}">{{ session.id }}</a>
+        {% else %}
+          <a class="edit-link" href="{% url 'confirm_checkout' session.id %}">{{ session.id }}</a>
+        {% endif %}
+        <div class="muted" style="font-size:12px;margin-top:4px">{{ session.model_name }}</div>
+      </div>
+      <div><span class="status-badge">{{ session.get_status_display }}</span></div>
+      <div>{{ session.num_detected }} / {{ session.num_unique }}</div>
+      <div><strong>${{ session.total }}</strong></div>
+      <div>{{ session.completed_at|date:"Y-m-d H:i"|default:"-" }}</div>
+      <div>
+        <button class="del-btn"
+                data-id="{{ session.id }}"
+                data-csrf="{{ csrf_token }}"
+                onclick="deleteSession(this)">Delete</button>
+      </div>
+    </div>
+    {% empty %}
+    <div class="list-item">
+      <div style="grid-column:1/-1">No sessions yet.</div>
+    </div>
+    {% endfor %}
+  </div>
+{% endblock %}
+
+{% block extra_js %}
+<script>
+function deleteSession(btn) {
+  const id = btn.dataset.id;
+  AppModal.show({
+    iconVariant: 'danger',
+    title: 'Delete session?',
+    message: 'Session <strong>#' + id.slice(0, 8).toUpperCase() + '</strong> will be permanently deleted.',
+    confirmText: 'Delete',
+    confirmVariant: 'danger',
+    onConfirm() {
+      btn.disabled = true;
+      fetch('/delete/' + id + '/', {
+        method: 'POST',
+        headers: {'X-CSRFToken': btn.dataset.csrf},
+      })
+      .then(r => r.json())
+      .then(d => {
+        if (d.ok) {
+          const row = document.getElementById('row-' + id);
+          row.style.transition = 'opacity 0.25s, transform 0.25s';
+          row.style.opacity = '0';
+          row.style.transform = 'translateX(-8px)';
+          setTimeout(() => row.remove(), 270);
+        } else { btn.disabled = false; }
+      })
+      .catch(() => { btn.disabled = false; });
+    }
+  });
+}
+</script>
+{% endblock %}
