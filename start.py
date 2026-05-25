@@ -26,20 +26,22 @@ def get_lan_ip() -> str:
 
 def main():
     ip = get_lan_ip()
-    url = f"http://{ip}:{PORT}"
+    local_url = f"http://127.0.0.1:{PORT}"
+    phone_url = f"http://{ip}:{PORT}"
     manage_py = WEBAPP_DIR / "manage.py"
 
     print()
     print("=" * 52)
     print("   Smart Checkout — starting server")
     print("=" * 52)
-    print(f"   Local URL : http://127.0.0.1:{PORT}")
-    print(f"   Phone URL : {url}")
+    print(f"   Local URL : {local_url}")
+    print(f"   Phone URL : {phone_url}")
     print()
     print("   📱 To use on your phone:")
     print(f"      1. Connect your phone to the SAME Wi-Fi network")
-    print(f"      2. Open  {url}  on your phone")
+    print(f"      2. Open  {phone_url}  on your phone")
     print(f"         (or scan the QR code shown on the page)")
+    print("      3. If this Phone URL does not work, use your computer's Wi-Fi IP instead")
     print()
     print("   Press Ctrl+C to stop the server")
     print("=" * 52)
@@ -58,7 +60,7 @@ def main():
     # open browser after a short delay
     def open_browser():
         time.sleep(1.5)
-        webbrowser.open(url)
+        webbrowser.open(local_url)
 
     import threading
     threading.Thread(target=open_browser, daemon=True).start()

@@ -60,7 +60,7 @@ From the project root:
 python start.py
 ```
 
-The launcher starts Django on port `8000`, prints both local and LAN URLs, and opens the web application in the browser.
+The launcher starts Django on port `8000`, prints both local and LAN URLs, and opens the local desktop URL in the browser.
 
 On first launch, `start.py` also runs Django database migrations automatically. This creates the local SQLite tables needed for checkout sessions, receipts and history records.
 
@@ -113,6 +113,8 @@ http://192.168.x.x:8000
 ```
 
 Open that URL on the phone or scan the QR code shown on the desktop checkout page. The phone acts only as an image capture device; final review and checkout confirmation remain on the desktop interface.
+
+If the printed phone URL starts with a Docker, VPN or virtual-network address and does not work on the phone, use the computer's real Wi-Fi IP address instead. The desktop browser should still use `http://127.0.0.1:8000`.
 
 Note: the QR code on the page uses a browser-side QR library loaded from a CDN. If the QR code does not appear, use the printed phone URL directly.
 
