@@ -62,6 +62,8 @@ python start.py
 
 The launcher starts Django on port `8000`, prints both local and LAN URLs, and opens the web application in the browser.
 
+On first launch, `start.py` also runs Django database migrations automatically. This creates the local SQLite tables needed for checkout sessions, receipts and history records.
+
 Use this URL on the same computer:
 
 ```text
@@ -76,6 +78,7 @@ If the launcher does not work, start Django manually:
 
 ```bash
 cd webapp
+python manage.py migrate
 python manage.py runserver 0.0.0.0:8000
 ```
 

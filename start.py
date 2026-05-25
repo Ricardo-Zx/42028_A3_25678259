@@ -2,7 +2,6 @@
 Smart Checkout — one-click launcher.
 Run from the project root:  python start.py
 """
-import os
 import socket
 import subprocess
 import sys
@@ -28,6 +27,7 @@ def get_lan_ip() -> str:
 def main():
     ip = get_lan_ip()
     url = f"http://{ip}:{PORT}"
+    manage_py = WEBAPP_DIR / "manage.py"
 
     print()
     print("=" * 52)
@@ -45,6 +45,16 @@ def main():
     print("=" * 52)
     print()
 
+    print("   Preparing database tables...")
+    migrate = subprocess.run(
+        [sys.executable, str(manage_py), "migrate", "--noinput"],
+        cwd=str(WEBAPP_DIR),
+    )
+    if migrate.returncode != 0:
+        print()
+        print("   Database migration failed. Please check the error above.")
+        sys.exit(migrate.returncode)
+
     # open browser after a short delay
     def open_browser():
         time.sleep(1.5)
@@ -54,7 +64,6 @@ def main():
     threading.Thread(target=open_browser, daemon=True).start()
 
     # start Django
-    manage_py = WEBAPP_DIR / "manage.py"
     subprocess.run(
         [sys.executable, str(manage_py), "runserver", f"0.0.0.0:{PORT}"],
         cwd=str(WEBAPP_DIR),
