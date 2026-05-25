@@ -34,6 +34,19 @@ Recommended environment:
 Install Python dependencies from the project root:
 
 ```bash
+python -m venv .venv
+source .venv/bin/activate
+```
+
+On Windows PowerShell, activate the virtual environment with:
+
+```powershell
+.\.venv\Scripts\Activate.ps1
+```
+
+Then install the dependencies:
+
+```bash
 pip install -r requirements.txt
 ```
 
