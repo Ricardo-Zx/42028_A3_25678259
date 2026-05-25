@@ -1,71 +1,140 @@
-# A3 Smart Checkout Webapp
+# Smart Retail Checkout Web Application
 
-This project is the deployment-oriented application layer for Assignment 3.
+This project is the deployment-oriented prototype for Assignment 3. It implements a smart retail checkout workflow around a trained YOLOv8n detector, including image input, product detection, SKU mapping, bill review, receipt generation and checkout history.
 
-It is intentionally separated from the original `retail-checkout-detection` prototype, which remains the experiment and notebook repository.
+The local package is intended for running and demonstrating the checkout web application. Model training was completed separately in the AWS SageMaker environment and is not required for normal local use.
 
-## Purpose
+## What This Package Contains
 
-This repository is for:
+- `webapp/`: Django web application, pages and database models.
+- `services/`: reusable YOLO inference and checkout calculation logic.
+- `models/yolov8n_best.pt`: final deployed detector used by the checkout prototype.
+- `configs/products.json`: SKU metadata, including YOLO class IDs, names, barcodes and categories.
+- `configs/prices.json`: product price table used for subtotal, GST and total calculation.
+- `webapp/static/demo_candidates/`: preset checkout-scene images for quick testing.
+- `figures/`: exported figures used in the final report.
+- `notebooks/`: reporting notebooks copied back from the training environment.
+- `scripts/`: dataset preparation and training scripts kept for reproducibility reference.
 
-- Django backend and frontend development
-- YOLOv8n inference integration
-- checkout item aggregation
-- price lookup and total bill calculation
+## What This Package Is Not For
 
-This repository is **not** for:
+This package is not the full training environment. The final model was trained on AWS SageMaker, not inside the local web application project.
 
-- model training
-- evaluation experiments
-- notebook reporting
+The local project does not include the full RPC dataset or require retraining before use. To reproduce training from scratch, use the scripts under `scripts/` together with the RPC dataset and a suitable GPU environment. The normal demo workflow only needs the included `models/yolov8n_best.pt` file.
 
-## Current Assets
+## Requirements
 
-- `models/yolov8n_best.pt`: final demonstration detector
-- `configs/products.json`: SKU metadata
-- `configs/prices.json`: price table for checkout calculation
-- `demo/images/`: demo images exported from evaluation outputs
-- `notebooks/`: final reporting notebooks copied back from AWS
-- `figures/`: exported notebook figures
-- `runs/train/`: extended-training run outputs used by the notebooks
+Recommended environment:
 
-## Project Structure
+- Python 3.10 or 3.11
+- macOS, Windows or Linux
+- Enough disk space for the model and Python packages
+- A GPU is optional for running the demo; CPU inference works but may be slower
 
-- `webapp/`: Django project and apps
-- `models/`: model weights
-- `configs/`: SKU and pricing metadata
-- `demo/`: demo inputs for local testing
-- `services/`: reusable inference and checkout logic
-- `scripts/`: AWS-side dataset and training scripts retained for reproducibility
-- `notebooks/`: report notebooks (`01`, `02`, `03`)
-- `figures/`: exported plots and comparison visuals
-- `runs/train/`: 300-epoch training runs for YOLOv5nu / YOLOv8n / YOLOv8s
+Install Python dependencies from the project root:
 
-## Run The Web App
+```bash
+pip install -r requirements.txt
+```
 
-Recommended:
+If PyTorch installation fails on your machine, install the correct PyTorch build for your platform first, then run the command above again. Ultralytics depends on PyTorch for YOLO inference.
+
+## Quick Start
+
+From the project root:
 
 ```bash
 python start.py
 ```
 
-This launcher:
+The launcher starts Django on port `8000`, prints both local and LAN URLs, and opens the web application in the browser.
 
-- starts Django on `0.0.0.0:8000`
-- prints both local and LAN URLs
-- opens the browser automatically
-- makes phone testing on the same Wi-Fi easier
+Use this URL on the same computer:
 
-Manual fallback:
+```text
+http://127.0.0.1:8000
+```
+
+To stop the server, press `Ctrl+C` in the terminal.
+
+## Manual Start
+
+If the launcher does not work, start Django manually:
 
 ```bash
 cd webapp
-python manage.py runserver
+python manage.py runserver 0.0.0.0:8000
 ```
 
-## Reproducibility Notes
+Then open:
 
-- Application/demo model: `YOLOv8n`
-- Training scripts are kept under `scripts/`
-- Extended training outputs are kept under `runs/train/`
-- Final report notebooks and exported figures are stored locally for reuse
+```text
+http://127.0.0.1:8000
+```
+
+## How To Use The Demo
+
+1. Open the desktop web interface.
+2. Start a checkout session.
+3. Submit a checkout-scene image using one of the available input methods:
+   - upload a local image;
+   - select a preset demo image;
+   - scan the QR code and capture an image from a mobile phone.
+4. Wait for YOLOv8n detection to finish.
+5. Review the generated bill on the checkout review page.
+6. Adjust quantities, remove incorrect items, manually add missed products or retake the image if needed.
+7. Confirm the checkout to generate the receipt.
+8. Open the history page to review previous checkout records.
+
+## Mobile Capture
+
+For mobile capture, the phone and the computer running Django must be connected to the same Wi-Fi network.
+
+After running `python start.py`, the terminal prints a phone-accessible LAN URL such as:
+
+```text
+http://192.168.x.x:8000
+```
+
+Open that URL on the phone or scan the QR code shown on the desktop checkout page. The phone acts only as an image capture device; final review and checkout confirmation remain on the desktop interface.
+
+Note: the QR code on the page uses a browser-side QR library loaded from a CDN. If the QR code does not appear, use the printed phone URL directly.
+
+## Model And Data Notes
+
+- The deployed model is `models/yolov8n_best.pt`.
+- The system maps YOLO class IDs to products through `configs/products.json`.
+- Prices are loaded from `configs/prices.json`.
+- The prepared training dataset was based on the RPC `val2019` checkout-scene subset.
+- The local package does not include the full RPC dataset.
+- Model training and evaluation were performed separately; local execution is for inference and checkout workflow demonstration.
+
+## Useful Commands
+
+Run a smoke test for inference and checkout summary generation:
+
+```bash
+python smoke_test.py
+```
+
+Run Django database migrations if the SQLite database is missing or recreated:
+
+```bash
+cd webapp
+python manage.py migrate
+```
+
+Start the web application manually:
+
+```bash
+cd webapp
+python manage.py runserver 0.0.0.0:8000
+```
+
+## Troubleshooting
+
+- If `ultralytics` or `torch` is missing, run `pip install -r requirements.txt`.
+- If the model cannot be loaded, check that `models/yolov8n_best.pt` exists.
+- If product names or prices are missing, check `configs/products.json` and `configs/prices.json`.
+- If mobile capture does not connect, confirm that the phone and computer are on the same Wi-Fi network and use the LAN URL printed by `start.py`.
+- If the port is already in use, stop the old server process or change the port in `start.py`.
