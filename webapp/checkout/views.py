@@ -450,8 +450,11 @@ def receipt(request, session_id: str):
 
 def _build_phone_url(request, session_id: str) -> str:
     base_url = getattr(settings, "PHONE_BASE_URL", "").strip().rstrip("/")
-    if not base_url:
-        base_url = request.build_absolute_uri("/").rstrip("/")
+    # Only use server-provided base if it's a real LAN address.
+    # If empty or localhost, return "" so the JS template falls back to
+    # window.location.origin (which reflects whatever URL the browser used).
+    if not base_url or "127.0.0.1" in base_url or "localhost" in base_url:
+        return ""
     return f"{base_url}{reverse('home')}?session={session_id}"
 
 
