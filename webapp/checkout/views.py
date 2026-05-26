@@ -448,12 +448,20 @@ def receipt(request, session_id: str):
     )
 
 
-def _build_desktop_wait_context(session: CheckoutSession, *, message: str = "") -> dict:
+def _build_phone_url(request, session_id: str) -> str:
+    base_url = getattr(settings, "PHONE_BASE_URL", "").strip().rstrip("/")
+    if not base_url:
+        base_url = request.build_absolute_uri("/").rstrip("/")
+    return f"{base_url}{reverse('home')}?session={session_id}"
+
+
+def _build_desktop_wait_context(request, session: CheckoutSession, *, message: str = "") -> dict:
     waiting_title = "Waiting for phone scan..."
     waiting_sub = "Scan the QR code with your phone to capture"
     info_title = "Scan & shoot"
     info_text = "Opens Smart Checkout on your phone.<br>Result appears here automatically."
 
+    session_id = str(session.id)
     if session.source_type == CheckoutSession.SourceType.MOBILE_UPLOAD:
         waiting_title = "Waiting for another phone photo..."
         waiting_sub = "Ask the customer or operator to capture another image"
@@ -469,7 +477,8 @@ def _build_desktop_wait_context(session: CheckoutSession, *, message: str = "") 
         info_text = "The previous image was cleared.<br>You can upload locally or scan with a phone."
 
     return {
-        "desktop_session": str(session.id),
+        "desktop_session": session_id,
+        "desktop_phone_url": _build_phone_url(request, session_id),
         "desktop_message": message,
         "desktop_waiting_title": waiting_title,
         "desktop_waiting_sub": waiting_sub,
@@ -656,7 +665,7 @@ def home(request):
             return render(
                 request,
                 "checkout/home.html",
-                _build_desktop_wait_context(session, message=message),
+                _build_desktop_wait_context(request, session, message=message),
             )
 
         if is_phone:
@@ -670,11 +679,13 @@ def home(request):
     if session_id:
         session = _get_or_create_session(session_id)
         if request.GET.get("mode") == "desktop":
-            return render(request, "checkout/home.html", _build_desktop_wait_context(session))
+            return render(request, "checkout/home.html", _build_desktop_wait_context(request, session))
         return render(request, "checkout/home.html", _build_phone_state_context(session))
 
     session = _get_or_create_session()
+    session_id = str(session.id)
     return render(request, "checkout/home.html", {
-        "desktop_session": str(session.id),
+        "desktop_session": session_id,
+        "desktop_phone_url": _build_phone_url(request, session_id),
         "demo_choices": _build_demo_choices(),
     })

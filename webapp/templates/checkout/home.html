@@ -728,7 +728,7 @@
 <script>
   {% if desktop_session %}
   const SESSION_ID = '{{ desktop_session }}';
-  const phoneUrl = window.location.origin + '/?session=' + SESSION_ID;
+  const phoneUrl = '{{ desktop_phone_url|escapejs }}' || (window.location.origin + '/?session=' + SESSION_ID);
   new QRCode(document.getElementById('qr-canvas'), {
     text: phoneUrl, width: 100, height: 100,
     colorDark: '#1a4d6b', colorLight: '#ffffff',

@@ -114,7 +114,15 @@ http://192.168.x.x:8000
 
 Open that URL on the phone or scan the QR code shown on the desktop checkout page. The phone acts only as an image capture device; final review and checkout confirmation remain on the desktop interface.
 
-If the printed phone URL starts with a Docker, VPN or virtual-network address and does not work on the phone, use the computer's real Wi-Fi IP address instead. The desktop browser should still use `http://127.0.0.1:8000`.
+The desktop browser opens `http://127.0.0.1:8000`, but the QR code uses the LAN phone URL printed by `start.py`. This allows the desktop demo to use localhost while the phone connects through the computer's Wi-Fi address.
+
+If the printed phone URL starts with a Docker, VPN or virtual-network address and does not work on the phone, restart the launcher with the computer's real Wi-Fi IP address:
+
+```bash
+SMART_CHECKOUT_PHONE_HOST=192.168.x.x python start.py
+```
+
+The desktop browser should still use `http://127.0.0.1:8000`.
 
 Note: the QR code on the page uses a browser-side QR library loaded from a CDN. If the QR code does not appear, use the printed phone URL directly.
 
